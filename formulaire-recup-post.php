@@ -8,6 +8,18 @@
     </head>
 
     <body>
+
+        <?php
+        //on verifie que l'on a recu par la methode post une variable envoyer (bouton)
+        if(isset($_POST['envoyer']))
+        {
+            $n = $_POST['nom'];
+            $p = $_POST['prenom'];
+            $v = $_POST['ville']; 
+
+            if(($n == '') || ($p == '') || ($v == ''))
+            {
+        ?>
         <form action="formulaire-recup-post.php" method="post">
 
             <div class="container">
@@ -32,7 +44,7 @@
                     <div class="col-12 col-md-9">
                         <input type="text" name="ville" id="idv" placeholder="Ville">
                     </div>
-                    
+
                     <div class="col-12">
                         <button class="btn btn-success mt-3" type="submit" name="envoyer" value="Envoyer"> Envoyer </button>
                     </div>
@@ -41,45 +53,102 @@
         </form>
         
         <?php
-        //on verifie que l'on a recu par la methode post une variable envoyer (bouton)
-        if(isset($_POST['envoyer']))
-        {
-        $n = $_POST['nom'];
-        $p = $_POST['prenom'];
-        $v = $_POST['ville'];
-        
-        echo '<div class="container mt-5">
-                <div class="row">
-                    <div class="col-12 col-md-3">';
-        echo            'Nom : ';
-        echo        '</div>';
-        echo        '<div class="col-12 col-md-9">';
-        echo        $n;
-        echo        '</div>';
-        
-        
-        echo        '<div class="col-12 col-md-3">
-                        Prénom : 
-                    </div>
-                    <div class="col-12 col-md-9">'
-                    . $p .
-                    '</div>';
-        
-        echo         '<div class="col-12 col-md-3">
-                        Ville : 
-                    </div>
-                    <div class="col-12 col-md-9 rouge">'
-                    . $v .
-                    '</div>';
-             }
+
+                if($n == '')
+                {
+                    echo 'veuillez saisir le nom <br/>';
+                }
+                if($p == '')
+                {
+                    echo 'veuillez saisir le prenom <br/>';
+                }
+                if($v == '')
+                {
+                    echo 'veuillez saisir la ville <br/>';
+                }
+            }
+            else
+            { 
         ?>
-        
-        <!--<div class="col-12 col-md-3">
-            Ville
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    Nom :
+                </div>
+                <div class="col-12 col-md-9">
+                    <?= $n; ?>
+                </div>
+
+                <div class="col-12 col-md-3">
+                    Prénom : 
+                </div>
+                <div class="col-12 col-md-9">
+                    <?= $p; ?>
+                </div>
+                <div class="col-12 col-md-3">
+                    Ville : 
+                </div>
+                <div class="col-12 col-md-9 rouge">
+                    <?= $v; ?>
+                </div>
+            </div>
         </div>
-        <div class="col-12 col-md-9">
-            <?= $v; ?> equivalent <?php echo $v ?>
-        </div>-->
+
+        <?php 
+            }
+        }
+        else
+        { 
+        ?>
+
+        <form action="formulaire-recup-post.php" method="post">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-3 mt-5">
+                        <label for="idn"> Nom : </label>
+                    </div>
+                    <div class="col-12 col-md-9 mt-5">
+                        <input type="text" name="nom" id="idn" placeholder="Nom">
+                    </div>
+
+                    <div class="col-12 col-md-3">
+                        <label for="idp"> Prenom : </label>
+                    </div>
+
+                    <div class="col-12 col-md-9">
+                        <input type="text" name="prenom" id="idp" placeholder="Prenom">
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <label for="idv"> Ville : </label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <input type="text" name="ville" id="idv" placeholder="Ville">
+                    </div>
+
+                    <div class="col-12">
+                        <button class="btn btn-success mt-3" type="submit" name="envoyer" value="Envoyer"> Envoyer </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <?php
+        }
+        ?>    
+
+
+
+
+
+
+        <!--<div class="col-12 col-md-3">
+Ville
+</div>
+<div class="col-12 col-md-9">
+<?= $v; ?> equivalent <?php echo $v ?>
+</div>-->
 
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
