@@ -94,7 +94,7 @@ function afficheForm($id = '', $nom = '', $ville = '')
                 <div class="col-12 col-md-3 text-center"><?= $ligne_tab['n_cli'] ?></div>
                 <div class="col-12 col-md-3 text-center"><?= $ligne_tab['nom_cli'] ?></div>
                 <div class="col-12 col-md-3 text-center"><?= $ligne_tab['ville_cli'] ?></div>
-                <div class="col-12 col-md-3 text-center "><a href="modif_client.php?num=<?= $ligne_tab['n_cli'] ?>"><img class="w-25 text-center " src="images/images.jpeg" alt=""></a></div>
+                <div class="col-12 col-md-3 text-center "><a href="modif_client_phi.php?num=<?= $ligne_tab['n_cli'] ?>"><img class="w-25 text-center " src="images/images.jpeg" alt=""></a></div>
             </div>
 
             <?php
