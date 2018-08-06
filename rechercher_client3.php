@@ -20,8 +20,6 @@ function afficheForm($num = '',$n = '', $v='')
 }
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="fr">
 	<head>

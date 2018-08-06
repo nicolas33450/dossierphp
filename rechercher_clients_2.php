@@ -91,18 +91,18 @@ function affiche_form($nom = '', $prenom = '', $ville = ''){
                         <input type="text" name="nom" id="idn" placeholder="Nom" value="">
                     </div>
                     <div class="col-12 col-md-3">
-                <label for="idp"> Prenom : </label>
-            </div>
+                        <label for="idp"> Prenom : </label>
+                    </div>
 
-            <div class="col-12 col-md-9">
-                <input type="text" name="prenom" id="idp" placeholder="Prenom" >
-            </div>
-            <div class="col-12 col-md-3">
-                <label for="idv"> Ville : </label>
-            </div>
-            <div class="col-12 col-md-9">
-                <input type="text" name="ville" id="idv" placeholder="Ville" >
-            </div>
+                    <div class="col-12 col-md-9">
+                        <input type="text" name="prenom" id="idp" placeholder="Prenom" >
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <label for="idv"> Ville : </label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <input type="text" name="ville" id="idv" placeholder="Ville" >
+                    </div>
 
                     <div class="col-12">
                         <button class="btn btn-secondary mt-3" type="submit" name="envoyer" value="Envoyer"> Envoyer </button>
