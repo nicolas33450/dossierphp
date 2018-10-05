@@ -9,18 +9,17 @@
     <body>
         du code HTML<br/>
         <?php 
-        $abc = 12;
-        $def = 3.14;
-        $ghi = 'un simple texte';
-        
-        echo 'Du code PHP : ' . $ghi . '<br/>';
-        
-        for ($i = 1; $i <= 10; $i++)
-        {
-            echo 'i = ' . $i . '<br/>';
-            echo "i = $i <br/>";
-        }
-        
+            $abc = 12;
+            $def = 3.14;
+            $ghi = 'un simple texte';
+            
+            echo 'Du code PHP : ' . $ghi . '<br/>';
+            
+            for ($i = 1; $i <= 10; $i++)
+            {
+                echo 'i = ' . $i . '<br/>';
+                echo "i = $i <br/>";
+            }       
         
         ?>
     </body>
