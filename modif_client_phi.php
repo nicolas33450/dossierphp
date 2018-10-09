@@ -158,7 +158,8 @@ function formulaire($num='', $n='', $p='', $a1='', $a2='',$cp='', $v='', $e='', 
 			{
 				require 'connexion.php';
 
-				$requete = $pdo->prepare("update clients set nom_cli = :nom, prenom_cli = :prenom, adr1_cli = :ad1, adr2_cli = :ad2, cp_cli = :cp, ville_cli = :ville, email_cli = :email where n_cli = :num");
+				$requete = $pdo->prepare("update clients set nom_cli = :nom, prenom_cli = :prenom, adr1_cli = :ad1,
+				 adr2_cli = :ad2, cp_cli = :cp, ville_cli = :ville, email_cli = :email where n_cli = :num");
 
 				$requete->bindValue(':num', $num);
 				$requete->bindValue(':nom', $nom);
